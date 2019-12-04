@@ -1,0 +1,87 @@
+<div class="container">
+    <h2 class="text-center pt-3">Booking Page</h2>
+    <hr>
+    <div class="row mt-5">
+        <div class="col-md-5 border rounded">
+            <div class="header text-center mt-4">
+                <h3 id="hotelId" class="{{{data._id}}}">Hotel Detail</h3>
+                <hr class='b-5'>
+            </div>
+            <div class="{{{data._id}}}" id="hotelId"></div>
+            <div class=" text-center">
+                <h5 id="hotelName" class="{{{data.name}}}">Hotel Name : {{data.name}}</h5>
+                <hr class='b-5'>
+                <h5 id="hotelAddress" class="{{{data.address}}}">Address : {{data.address}}</h5>
+                <hr class='b-5 mt-4'>
+                <h5 id="hotelCity" class="{{{data.city}}}">City : {{data.city}}</h5>
+                <hr class='b-5 mt-4'>
+                <h5 id="hotelPhone" class="{{{data.phone}}}">Phone No : {{data.phone}}</h5>
+                <hr class='b-5 mt-4 mb-5'>
+                <h5 id="hotelPrice" class="{{{data.price}}}">Price :{{data.price}}</h5>
+            </div>
+        </div>
+        <div class="col-md-5 offset-md-2 border rounded text-center">
+            <h3 class="mt-4">Booking Form</h3>
+            <hr class='b-5 mt-4'>
+            <form action="/confirm" method="get" onsubmit="return validate()">
+                <div class="form-group row text-center">
+                    Guest :
+                    <input type="number" class="form-control" placeholder="No. of Guests" id="guestQuantity">
+                    <p class="error" style=" color:red"></p>
+                </div>
+                <div class="form-group row">
+                    Room :
+                    <input type="number" class="form-control" placeholder="No. of Rooms" id="roomQuantity">
+                    <p class="error" style=" color:red"></p>
+                </div>
+                <div class="form-group row">
+                    CheckIn Date :
+                    <input type="date" class="form-control" onchange="checkDate('checkIn')"
+                        placeholder="Enter Checkin Date..." id="checkIn">
+                    <p class="error" style=" color:red"></p>
+                </div>
+                <div class="form-group row">
+                    Checkout Date :
+                    <input type="date" class="form-control" onchange="checkDate('checkOut')"
+                        placeholder="Enter Checkout date..." id="checkOut">
+                    <p class="error" style=" color:red"></p>
+                </div>
+                <button type="submit" class="btn mb-3" style="color: white; background-color:#F95309"
+                    id="confirm">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!--
+{{!-- modal --}}
+<button id="loginModal" type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookingDone"
+    style="margin-top: 50px;" hidden>
+    Launch demo modal
+</button>
+<!-- Modal -->
+<!--<div class="modal fade" id="bookingDone" tabindex="-1" role="dialog" aria-labelledby="bookingDoneLabel"
+    ara-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content text-center">
+            <div class="modal-header">
+                <h5 class="modal-title" id="bookingDoneLabel">Booking details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                    onclick="window.location.href = '/dashboard';">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                    onclick="window.location.href = '/dashboard';">go to dashboard</button>
+            </div>
+        </div>
+    </div>
+</div> -->
+{{!----}}
+
+<script src="./../public/script/bookingDetails.js"></script>

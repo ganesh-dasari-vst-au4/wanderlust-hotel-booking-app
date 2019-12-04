@@ -1,0 +1,14 @@
+.container#ticketbooking{
+    margin-top:40px;
+    margin-bottom:40px;
+    width:30%;
+    height: 100%;
+    border: black solid 1px;
+    border-radius: 8px;
+}
+div.head{
+    display: block;
+}
+ img,p{
+    display: inline;
+}

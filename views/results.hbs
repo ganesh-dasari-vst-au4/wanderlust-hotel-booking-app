@@ -1,0 +1,79 @@
+<link rel="stylesheet" href="./../public/style/results.css">
+{{!-- search box starts --}}
+<form action="/results" method="POST">
+    <div id="searchBar">
+        <div class="row ml-2 mr-2">
+            <div class="col-md-1"></div>
+            <div class="col-md-9 mt-4">
+                <input type="text" name="destination" id="destination2" placeholder="Destination"
+                    class="form-control mb-2" required>
+            </div>
+
+            <div class="col-md-2"><br>
+                <button id="searchButton2" class="btn" style="color: white; background-color:#F95309"
+                    type="submit">Search</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="text-center pb-3">
+        <b>
+            <p>Hotels in {{cityName}}<p></p>
+    </div>
+
+</form>
+{{!-- search box ends --}}
+{{!-- results page starts --}}
+
+<div class=" pt-5 pb-5" style="background-color: #e9ecef;">
+    <div class="container">
+        <div class="ml-5 mr-5">
+            {{#if data.length}}
+
+            {{#each data}}
+            <form action="/preview" method="POST">
+                <div class="card mb-4" style="width: 100%; height: 225px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src={{this.image}} class="card-img" alt="..." id="image-{{@index}}"
+                                style="width: 340px; height: 223px; padding: 2px;">
+                        </div>
+                        <div class="col-md-8 pb-1">
+                            <div class="card-body">
+                                <h4 class="card-title" id="tilte-{{@index}}"><b>{{this.name}}</b></h4>
+
+                                <p class="card-text" id="address-{{@index}}">{{this.address}}</p><br>
+                                <span>
+                                    <p class="card-text" id="city"><b>{{this.city}},</b></p>
+                                    <p class="card-text" id="country"><b>{{this.country}}</b></p>
+                                </span>
+
+                                <h5 class="phone" id="phone-{{@index}}" style="visibility:hidden;">&#9742;
+                                    {{this.phone}}
+                                </h5>
+
+
+                                <h5 class="price " id="price-{{@index}}" style="font-size: 1.25rem;">
+                                    &#x20B9;{{this.price}}</h5>
+
+                                <button class="btn mb-2 mr-3" id="book-button"> <a href="/preview?id={{this._id}}"
+                                        id="book" class="btn">Click For More
+                                        Detail
+                                    </a></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            {{/each}}
+            {{else}}
+            <h1 class="text-center">Currently We dont serve in this city!!!</h1>
+            {{/if}}
+
+        </div>
+    </div>
+
+</div>
+{{!-- results ends --}}
+<script src="./../public/script/results.js"></script>

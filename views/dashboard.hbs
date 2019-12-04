@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="./../public/style/dashboard.css">
+<div class="my-3 text-center">
+    <h1>Dashboard</h1>
+    <hr style="width: 80%;">
+</div>
+<div class="container">
+    <!--booking history section-->
+    <div class="row">
+        <div class="col-md-5 pb-3 text-center rounded" style="border:1px black solid; background:transparent;">
+            <h3>Booking History</h3>
+            <hr class="b-4">
+            {{# each items}}
+            <div class="card w-100">
+                <div class="card-body">
+                    <div class="text-center">
+                        <h5 class="card-title"><b>{{this.name}}</b></h5><br>
+                    </div>
+                    <div>
+                        <p class="card-text float-left">Booking Date: <b>{{this.checkIn}}</b></p>
+
+                        <p class="card-text float-right">No. of guests: <b>{{this.guests}}</b></p>
+                    </div><br><br>
+                    <div>
+                        <p class="card-text float-left" style="margin-left:0px ;">No. of room: <b>{{this.rooms}}</b>
+                        </p>
+
+                        <p class="card-text float-right" style="color: red;"><b>&#x20B9;
+                                {{this.price}}</b></p>
+                    </div><br><br>
+                    <a href="/delete?id={{this._id}}" id="cancel" data-toggle="tooltip" data-placement="top"
+                        title="Cancel this booking">&#x274C;</a>
+                    <div class="text-center">
+                        <a href="/view?id={{this._id}}" id="view" class="update">View</a></div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        <!-- User-Profile section -->
+        <div class="col-md-5 offset-md-2 rounded text-center" style="border:1px black solid; background:transparent;">
+            <h3>Profile</h3>
+            <hr class="b-4">
+            <img src="./../public/images/bus.png" alt="user_profile" width="100px" class="mb-4">
+            <div class="text-center">
+
+                {{#each account}}
+
+                <p></p>
+                <p>Name:</p>
+                <h4>{{this.name}}</h4>
+
+                <p>Email Id:</p>
+                <h4>{{this.email}}</h4>
+
+                <p>Mobile No:</p>
+                <h4>{{this.phoneNumber}}</h4>
+                <br>
+                <a href="/update" class="update">Edit info</a>
+
+                <hr class="b-4">
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>

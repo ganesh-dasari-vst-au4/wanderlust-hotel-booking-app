@@ -1,0 +1,27 @@
+.sticky {
+  background-color: #7f9cc7;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+button#book-button {
+  height: 8vh;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+.price {
+  position: absolute;
+  bottom: 10px;
+}
+.btn{
+  font-weight: 600;
+  font-size: 13px;
+  color: white;
+  border: solid 1px transparent;
+  border-radius: 3px;
+  background-color: #f86810;
+}

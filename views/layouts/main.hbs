@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="./../../public/images/logo.png">
+    <link rel="stylesheet" href="./../../public/style/main.css">
+    <link rel="stylesheet" href="./../../public/style/ticketbooking.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wanderlust hotel booking app</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <nav class="navbar navbar-expand-lg">
+
+                <a href="/"><img src="./../../public/images/logo.png" alt="logo" width="60px" height="60px">
+                    <div class="navbar-brand">
+                        <b class="app-name" id="appname">anderlust</b>
+                    </div>
+                </a>
+                <div id="nav" class="nav navbar-nav ml-auto">
+                    <div class="nav-item nav-link active ml-5"><a href="/" style="color:black">Home</a></div>
+                    <div class="nav-item nav-link active-signup ml-5"><a href={{link}} style="color:black">{{nav}}</a>
+                    </div>
+                    <div class="nav-item nav-link active ml-5"><a href="./../dashboard"
+                            style="color:black">Dashboard</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        {{{body}}}
+    </main>
+    <footer>
+        <div class="mt-5" width='100%' height='80px'>
+            <div class=" footer">
+
+                <small class="ml-2">&copy; Copyright 2019, Eagle Corporation</small>
+                <span class="ml-5">Connect with us:</span>
+                <a href="https://www.facebook.com/"> <img class="ml-3"
+                        src="https://img.icons8.com/color/48/000000/facebook-circled.png"></a>
+                <a href="https://twitter.com/home"><img class="ml-3"
+                        src="https://img.icons8.com/color/48/000000/twitter.png"></a>
+                <a href="https://www.youtube.com/"><img class="ml-3"
+                        src="https://img.icons8.com/small/32/000000/youtube.png"></a>
+                <a href="https://www.instagram.com/"><img class="ml-3"
+                        src="https://img.icons8.com/color/48/000000/instagram-new.png"></a>
+                <div class="nav-item nav-link active ml-5" style="display: inline-block;">
+                    <a href="./../contactus" style="color:black">Contact</a>
+                </div>
+                <div class="nav-item nav-link active ml-5" style="display: inline-block;">
+                    <a href="./../contactus" style="color:black">FAQ</a>
+                </div>
+                <div class="nav-item nav-link active ml-5" style="display: inline-block;">
+                    <a href="/aboutus" style="color:black">AboutUs</a>
+                </div>
+                <div class="nav-item nav-link active ml-5" style="display: inline-block;">
+                    <a href="/complaint" style="color:black">Complaint Form</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./../../public/script/home.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+{{!-- <link rel="stylesheet" href="./../public/style/signupModalStyle.css"> --}}
+<div class="container">
+    <div class="row mt-5">
+        <!--FAQ container-->
+        <div class="col-md-5 rounded pb-3 text-center " style="border:1px black solid; background:transparent;">
+            <h1 class="p-2">FAQ</h1>
+            <hr>
+            <div class="accordion" id="accordionExample">
+                <div class="card mt-5">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                How do i book Hotel?
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            For book a hotle , first you have search the destination city on home page , by clicking on
+                            search button you will redirected to result page , where you will get the top hotel of
+                            searched city and from there you can select hotel from your convinience and when you click
+                            on selected hotel it will take you to selected hotel's page where you will get hotel detail,
+                            price, room availablity and etc, after checking this if you want to book hotel then click on
+                            book button and it will ask your credantials and tada, your booking is successfully
+                            completed.
+                        </div>
+                    </div>
+                </div>
+                <div class="card mt-2">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                How do i cancel a hotel?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            For cancel the booking from our Hotel, First you have to login with the same id you booking,
+                            and after login, go to dashboard page where you find your booking history there you click on
+                            the booking and cancel your booking. But seriously this is not worth answering question.
+                        </div>
+                    </div>
+                </div>
+                <div class="card mt-2">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Do i get refund if i cancel my booking?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            Yes, you will get the refund, if you cancel the booking withing 6 days of booking, after
+                            that you wont get a single penny from our side.
+                        </div>
+                    </div>
+                </div>
+                <div class="card mt-2">
+                    <div class="card-header" id="headingFour">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Can i pay at the Hotel?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            Yes, you can pay at hotel because we could leave the country after taking your 5000/- rs of
+                            booking.
+                        </div>
+                    </div>
+                </div>
+                <div class="card mt-2">
+                    <div class="card-header" id="heading5">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                How do i pay Online?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Actually you can not pay online, because nishant said dont need for extra features so sorry
+                            for the inconvenience.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Contact Us container-->
+        <div class="col-md-5 offset-md-2 rounded" style="border:1px black solid; background:transparent;">
+            <div class="text-center pt-2">
+                <h1>Contact Us</h1>
+                <p>for any queries and support.</p>
+                <hr>
+            </div>
+            <form action="/contactus" method="POST" id="contactUs">
+                <div class="form-group  pl-4 pr-4">
+                    <label for="name"><b>Name</b></label>
+                    <input class="form-control" type="text" name="name" id="name" required placeholder="Name">
+                </div>
+                <div class="form-group pl-4 pr-4 ">
+                    <label for="email"><b>e-mail</b></label>
+                    <input class="form-control" type="email" name="email" id="email" required
+                        placeholder="abc@gmail.com">
+                </div>
+                <div class="form-group pl-4 pr-4">
+                    <label for="comment"><b> Comment:</b></label>
+                    <textarea class="form-control" rows="4" id="comment" name="comment" required
+                        placeholder="Describe here"></textarea>
+                </div>
+
+                <div class="text-center">
+                    <input class="btn" style="color: white; background-color:#F95309" id="butn" type="submit"
+                        value="Submit" style="width: 15vw;">
+                </div>
+        </div>
+        </form>
+    </div>
+</div>
+</div>
+{{!-- modal --}}
+<button id="contactUsModal" type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactDone"
+    style="margin-top: 50px;" hidden>
+    Launch demo modal
+</button>
+<!-- Modal -->
+<div class="modal fade" id="contactDone" tabindex="-1" role="dialog" aria-labelledby="contactDoneLabel"
+    ara-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content text-center">
+            <div class="modal-header">
+                <h5 class="modal-title" id="contactDoneLabel">Complaint Registration Status</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                    onclick="window.location.href = '/';">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+{{!----}}
+<script type="text/javascript" src="./../public/script/contactUs.js"></script>

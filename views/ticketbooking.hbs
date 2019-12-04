@@ -1,0 +1,96 @@
+<link rel="stylesheet" href="./../public/style/ticketbooking.css">
+<h3 class="d-flex justify-content-center ">Ticket Booking</h3>
+
+<div class="container d-flex justify-content-center" id="ticketbooking">
+  <center>
+    <a href=""> <img class="mt-3 mb-3 mr-3" id="flight" src="./../public/images/201623.svg" style="height: 70px;"
+        style="width: 70px;" alt="Image not found!" srcset=""></a>
+
+    <a href=""> <img class="mt-3 mb-3 ml-3 mr-3 " id="bus" src="./../public/images/bus.png" style="height: 70px;"
+        style="width: 70px;" alt="Image not found!" srcset=""></a>
+    <a href=""> <img class="mt-3 mb-3 ml-3" id="train" src="./../public/images/train.png" style="height: 70px;"
+        style="width: 70px;" alt="Image not found!" srcset=""><a>
+        <div class="head">
+          <p class="mr-5"><a href="" id="flight" style="color: black;">Flight</a></p>
+          <p class="ml-3 mr-3"><a href="" id="bus" style="color: black;">Bus</a></p>
+          <p class="ml-5 "><a href="" id="train" style="color: black;">Train</a></p>
+        </div>
+
+  </center>
+</div>
+<div class="container d-flex justify-content-center" id="ticketbooking">
+
+
+
+  {{!-- flight block --}}
+  <flight>
+    <form class="form-group" method="post" action="">
+
+      <center>
+        <p><b>Book Flight Tickets</b></p>
+      </center>
+      <hr>
+      <p class="mt-2 mb-2">From</p> <input class="form-control" type="text" name="flightsrc" id="flightsrc" required>
+      To <input class="form-control mt-2 mb-2" type="text" name="flightdes" id="flightdes" required>
+      Date <input class="form-control mt-2 mb-2" type="date" name="flightdate" value="DD-MM-YYYY" id="flightdate" required>
+      Passenger <input class="form-control mt-2 mb-2" type="number" name="flightpassenger" id="flightpassenger"
+        required>
+      Class <select class="form-control mt-2 mb-2" name="flightclass" id="flightclass" required>
+        <option value="economy">Economy</option>
+        <option value="bussiness">Bussiness</option>
+        <option value="first">First</option>
+        <option value="premium">Premium</option>
+      </select>
+      <button class="btn btn-primary mt-2 mb-2" type="submit">Search Flights</button>
+    </form>
+  </flight>
+
+
+
+  {{!-- train block --}}
+  <train>
+    <form class="form-group" method="post" action="/ticketbooking">
+
+      <center>
+        <p><b>Book Train Tickets</b></p>
+      </center>
+      <hr>
+      <p class="mt-2 mb-2">From</p> <input class="form-control" type="text" name="trainsrc" id="trainsrc" required>
+      To <input class="form-control mt-2 mb-2" type="text" name="traindes" id="traindes" required>
+      Date <input class="form-control mt-2 mb-2" type="text" name="traindate" id="traindate" placeholder="DD-MM-YYYY" required>
+      Train No <input class="form-control mt-2 mb-2" type="number" name="trainnumber" id="trainnumber" required>
+       Age <input class="form-control mt-2 mb-2" type="number" name="trainage" id="trainage" required>
+      Class <select class="form-control mt-2 mb-2" name="trainclass" id="trainclass" required>
+        <option value="1A">1A</option>
+        <option value="2A">2A</option>
+        <option value="3A">3A</option>
+        <option value="sl">SL</option>
+      </select>
+      <button class="btn btn-primary mt-2 mb-2" type="submit">Check</button>
+    </form>
+  </train>
+
+
+  {{!-- bus block --}}
+  <bus>
+    <form class="form-group" action="post" target="">
+
+      <center>
+        <p><b>Book Bus Tickets</b></p>
+      </center>
+      <hr>
+      <p class="mt-2 mb-2">From</p> <input class="form-control" type="text" name="bussrc" id="bussrc" required>
+      To <input class="form-control mt-2 mb-2" type="text" name="busdes" id="busdes" required>
+      Date <input class="form-control mt-2 mb-2" type="date" name="busdate" id="busdate" required>
+      Passenger <input class="form-control mt-2 mb-2" type="number" name="buspassenger" id="buspassenger" required>
+      Class <select class="form-control mt-2 mb-2" name="busclass" id="busclass" required>
+        <option value="ac">AC</option>
+        <option value="nonac">Non Ac</option>
+      </select> 
+      <button class="btn btn-primary mt-2 mb-2" type="submit">Search Bus</button>
+    </form>
+  </bus>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

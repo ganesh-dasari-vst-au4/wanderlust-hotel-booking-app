@@ -1,0 +1,220 @@
+<body id="mainbody">
+    <link rel="stylesheet" href="./../public/style/homestyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <div class="container">
+        <h2 class="text-center pt-3">Hotel Details</h2>
+        <hr>
+        <div class="row">
+            <img src={{data.image}} class="col-md-6" alt="" width="50%" height="250vh">
+            <img src={{data.image2}} class="col-md-6" alt="" width="50%" height="250vh">
+        </div>
+        <hr>
+        <div class="text-center p-3" style="background-color: #e9ecef; border-radius: 3px;">
+            <h2>{{data.name}}</h2>
+            <h5>{{data.city}}, {{data.country}} </h5>
+        </div>
+
+        <hr>
+        <div>
+            <div class="row">
+                <div class="p-3 col-md-8">
+                    <h4>Address: {{data.address}}</h4><br>
+                    <h4>Phone: {{data.phone}}</h4>
+                </div>
+                <div class="p-3 col-md-4">
+                    <h4>Totalrooms: {{data.totalrooms}}</h4><br>
+                    <h4>Price: {{data.price}}</h4>
+                </div>
+            </div>
+            <hr>
+            <h2 class="text-center">Amenities</h2>
+            <hr>
+            <div class="row pt-3">
+                <div class="col-md-4 mb-3" style="padding-left: 120px;">
+                    <h5><i class='fas fa-circle' style='font-size:12px'></i> Breakfast</h5>
+                </div>
+                <div class="col-md-4 mb-3" style="padding-left: 120px;">
+                    <h5><i class='fas fa-circle' style='font-size:12px'></i> Dry Clean</h5>
+                </div>
+
+                <div class="col-md-4 mb-3" style="padding-left: 120px;">
+                    <h5><i class='fas fa-circle' style='font-size:12px'></i> House Keeping</h5>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 mb-3" style="padding-left: 120px;">
+                    <h5><i class='fas fa-circle' style='font-size:12px'></i> Restaurant & Bar</h5>
+                </div>
+                <div class="col-md-4 mb-3" style="padding-left: 120px;">
+                    <h5><i class='fas fa-circle' style='font-size:12px'></i> Parking</h5>
+                </div>
+                <div class="col-md-4 mb-3" style="padding-left: 120px;">
+                    <h5><i class='fas fa-circle' style='font-size:12px'></i> Gym</h5>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 mb-3" style="padding-left: 120px;">
+                    <h5><i class='fas fa-circle' style='font-size:12px'></i> Swimming Pool</h5>
+                </div>
+                <div class="col-md-4 mb-3" style="padding-left: 120px;">
+                    <h5><i class='fas fa-circle' style='font-size:12px'></i> Club</h5>
+                </div>
+                <div class="col-md-4 mb-3" style="padding-left: 120px;">
+                    <h5><i class='fas fa-circle' style='font-size:12px'></i> Garden</h5>
+                </div>
+            </div>
+
+        </div><br><br>
+        <div class="text-center">
+            <button type="submit" class="btn  text-center" style="width: 20%;"><a
+                    href="/booking?id={{data._id}}" class="btn">Book hotel</a></button>
+        </div>
+    </div>
+    <hr>
+
+
+
+    {{!-- carouesl --}}
+
+    <link rel="stylesheet" href="./../public/style/homestyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+    <center>
+        <h2>Popular Hotels</h2>
+    </center>
+    <hr>
+    <br> <!-- Showing the suggestion to the user -->
+
+    {{!-- carousel --}}
+    <div class="owl-carousel owl-theme">
+        <div class="item">
+            <div class="card">
+                <img src="{{hotels.[0].image}}" class="card-img-top" style="width: 100%; height: 45%" alt="Hotel1">
+                <div class="card-body">
+                    <h5 class="card-title"><b>{{hotels.[0].name}}</b></h5>
+                    <p class="card-text" id="address0"> {{hotels.[0].address}}</p><br>
+                    <b>
+                        <P>{{hotels.[0].city}}</P>
+                        <P>{{hotels.[0].country}}
+                    </b></P> <br>
+                    <p class="card-text mt-5" id="price0" style="color: RED;">&#x20B9; {{hotels.[0].price}}</p><br>
+
+                    <a href="/preview?id={{hotels.[0]._id}}" class="btn  mt-2">Take a look</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <img src="{{hotels.[10].image}}" class="card-img-top" style="width: 100%; height: 45%" alt="Hotel1">
+                <div class="card-body">
+                    <h5 class="card-title"><b>{{hotels.[10].name}}</b></h5>
+                    <p class="card-text" id="address1"> {{hotels.[10].address}}</p><br>
+                    <b>
+                        <P>{{hotels.[10].city}}</P>
+                        <P>{{hotels.[10].country}}
+                    </b></P> <br>
+                    <p class="card-text" id="price1" style="color: red;">&#x20B9; {{hotels.[10].price}}</p><br>
+                    <a href="/preview?id={{hotels.[10]._id}}" class="btn  mt-2">Take a look</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <img src="{{hotels.[20].image}}" class="card-img-top" style="width: 100%; height: 45%" alt="Hotel1">
+                <div class="card-body">
+                    <h5 class="card-title"><b>{{hotels.[20].name}}</b></h5>
+                    <p class="card-text" id="address2">{{hotels.[20].address}}</p><br>
+                    <b>
+                        <P>{{hotels.[20].city}}</P>
+                        <P>{{hotels.[20].country}}
+                    </b></P> <br>
+                    <p class="card-text" id="price2" style="color: red;">&#x20B9; {{hotels.[20].price}}</p><br>
+                    <a href="/preview?id={{hotels.[20]._id}}" class="btn mt-2">Take a look</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <img src="{{hotels.[30].image}}" class="card-img-top" style="width: 100%; height: 45%" alt="Hotel1">
+                <div class="card-body">
+                    <h5 class="card-title"><b>{{hotels.[30].name}}</b></h5>
+                    <p class="card-text" id="address3"> {{hotels.[30].address}}</p><br>
+                    <b>
+                        <P>{{hotels.[30].city}}</P>
+                        <P>{{hotels.[30].country}}
+                    </b></P> <br>
+                    <p class="card-text" id="price3" style="color: red;">&#x20B9; {{hotels.[30].price}}</p><br>
+                    <a href="/preview?id={{hotels.[30]._id}}" class="btn mt-2">Take a look</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <img src="{{hotels.[40].image}}" class="card-img-top" style="width: 100%; height: 45%" alt="Hotel1">
+                <div class="card-body">
+                    <h5 class="card-title"><b>{{hotels.[40].name}}</b></h5>
+                    <p class="card-text" id="address4">{{hotels.[40].address}}</p><br>
+                    <b>
+                        <P>{{hotels.[40].city}}</P>
+                        <P>{{hotels.[40].country}}
+                    </b></P> <br>
+                    <p class="card-text" id="price4" style="color: red;">&#x20B9; {{hotels.[40].price}}</p><br>
+                    <a href="/preview?id={{hotels.[40]._id}}" class="btn  mt-2">Take a look</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <img src="{{hotels.[50].image}}" class="card-img-top" style="width: 100%; height: 45%" alt="Hotel1">
+                <div class="card-body">
+                    <h5 class="card-title"><b>{{hotels.[50].name}}</b></h5>
+                    <p class="card-text" id="address5">{{hotels.[50].address}}</p><br>
+                    <b>
+                        <P>{{hotels.[50].city}}</P>
+                        <P>{{hotels.[50].country}}
+                    </b></P> <br>
+                    <p class="card-text" id="price5" style="color: red;">&#x20B9; {{hotels.[50].price}}</p><br>
+                    <a href="/preview?id={{hotels.[50]._id}}" class="btn  mt-2">Take a look</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <img src="{{hotels.[60].image}}" class="card-img-top" style="width: 100%; height: 45%" alt="Hotel1">
+                <div class="card-body">
+                    <h5 class="card-title"><b>{{hotels.[60].name}}</b></h5>
+                    <p class="card-text" id="address6">{{hotels.[60].address}}</p><br>
+                    <b>
+                        <P>{{hotels.[60].city}}</P>
+                        <P>{{hotels.[60].country}}
+                    </b></P> <br>
+                    <p class="card-text" id="price6" style="color: red;">&#x20B9; {{hotels.[60].price}}</p><br>
+                    <a href="/preview?id={{hotels.[60]._id}}" class="btn  mt-2">Take a look</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <img src="{{hotels.[70].image}}" class="card-img-top" style="width: 100%; height: 45%" alt="Hotel1">
+                <div class="card-body">
+                    <h5 class="card-title"><b>{{hotels.[70].name}}</b></h5>
+                    <p class="card-text" id="address7">{{hotels.[70].address}}</p><br>
+                    <b>
+                        <P>{{hotels.[70].city}}</P>
+                        <P>{{hotels.[70].country}}
+                    </b></P> <br>
+                    <p class="card-text" id="price7" style="color: red;">&#x20B9; {{hotels.[70].price}}</p><br>
+                    <a href="/preview?id={{hotels.[70]._id}}" class="btn  mt-2">Take a look</a>
+                </div>
+            </div>
+        </div>
+
+        {{!-- carousel end --}}
+
+
+    </div>

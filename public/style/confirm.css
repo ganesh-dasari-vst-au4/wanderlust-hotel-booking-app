@@ -1,0 +1,19 @@
+.container {
+  width: 50%;
+  text-align: center;
+
+  border: 1px black solid;
+  background: transparent;
+  border-radius: 3px;
+}
+.btn {
+  font-weight: 600;
+  font-size: 13px;
+  color: #f9f9f9;
+  border: solid 1px transparent;
+  border-radius: 3px;
+  background-color: #f86810;
+}
+a {
+  color: #f9f9f9;
+}

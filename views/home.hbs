@@ -1,0 +1,165 @@
+<body id="mainbody">
+    <link rel="stylesheet" href="./../public/style/homestyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+    <div class="row mt-5"></div>
+    <div class="container" id="maindiv">
+        <div class="row mt-3"></div>
+        {{!-- <p class="text-center" id="h1heading">Search Hotel</p> --}}
+        <center>
+            <h1>Wanderlust</h1>
+        </center>
+        <h2 class="text-center" id="h2heading">Find hundreds of hotels at once. </h2>
+        <div class="row mt-5"></div>
+        <form action="/results" method="POST">
+            <cneter>
+                <div class="row mt-2 ml-4 mr-4 pr-5">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-9">
+                        <b><label>Enter your destination city here</label></b><!-- Destination input -->
+                        <input type="text" name="destination" id="destination" placeholder="Destination"
+                            class="form-control" required>
+                    </div>
+                    <div class="col-md-2"><br>
+                        <button id="searchButton" type="submit" class="btn" style="vertical-align:middle"><span>Search
+                            </span></button>
+                    </div>
+                </div>
+        </form>
+        <hr id="hr1">
+        <center>
+            <h2>Popular Hotels</h2>
+        </center>
+        <hr>
+        <br> <!-- Showing the suggestion to the user -->
+
+        {{!-- carousel --}}
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <div class="card">
+                    <img src="{{hotels.[0].image}}" class="card-img-top" style="width: 100%; height: 45%" alt="Hotel1">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>{{hotels.[0].name}}</b></h5>
+                        <p class="card-text" id="address0"> {{hotels.[0].address}}</p><br>
+                        <b>
+                            <P>{{hotels.[0].city}}</P>
+                            <P>{{hotels.[0].country}}
+                        </b></P> <br>
+                        <p class="card-text mt-5" id="price0" style="color: RED;">&#x20B9; {{hotels.[0].price}}</p><br>
+
+                        <a href="/preview?id={{hotels.[0]._id}}" class="btn  mt-2">Take a look</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <img src="{{hotels.[10].image}}" class="card-img-top" style="width: 100%; height: 45%" alt="Hotel1">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>{{hotels.[10].name}}</b></h5>
+                        <p class="card-text" id="address1"> {{hotels.[10].address}}</p><br>
+                        <b>
+                            <P>{{hotels.[10].city}}</P>
+                            <P>{{hotels.[10].country}}
+                        </b></P> <br>
+                        <p class="card-text" id="price1" style="color: red;">&#x20B9; {{hotels.[10].price}}</p><br>
+                        <a href="/preview?id={{hotels.[10]._id}}" class="btn mt-2">Take a look</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <img src="{{hotels.[20].image}}" class="card-img-top" style="width: 100%; height: 45%" alt="Hotel1">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>{{hotels.[20].name}}</b></h5>
+                        <p class="card-text" id="address2">{{hotels.[20].address}}</p><br>
+                        <b>
+                            <P>{{hotels.[20].city}}</P>
+                            <P>{{hotels.[20].country}}
+                        </b></P> <br>
+                        <p class="card-text" id="price2" style="color: red;">&#x20B9; {{hotels.[20].price}}</p><br>
+                        <a href="/preview?id={{hotels.[20]._id}}" class="btn  mt-2">Take a look</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <img src="{{hotels.[30].image}}" class="card-img-top" style="width: 100%; height: 45%" alt="Hotel1">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>{{hotels.[30].name}}</b></h5>
+                        <p class="card-text" id="address3"> {{hotels.[30].address}}</p><br>
+                        <b>
+                            <P>{{hotels.[30].city}}</P>
+                            <P>{{hotels.[30].country}}
+                        </b></P> <br>
+                        <p class="card-text" id="price3" style="color: red;">&#x20B9; {{hotels.[30].price}}</p><br>
+                        <a href="/preview?id={{hotels.[30]._id}}" class="btn  mt-2">Take a look</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <img src="{{hotels.[40].image}}" class="card-img-top" style="width: 100%; height: 45%" alt="Hotel1">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>{{hotels.[40].name}}</b></h5>
+                        <p class="card-text" id="address4">{{hotels.[40].address}}</p><br>
+                        <b>
+                            <P>{{hotels.[40].city}}</P>
+                            <P>{{hotels.[40].country}}
+                        </b></P> <br>
+                        <p class="card-text" id="price4" style="color: red;">&#x20B9; {{hotels.[40].price}}</p><br>
+                        <a href="/preview?id={{hotels.[40]._id}}" class="btn  mt-2">Take a look</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <img src="{{hotels.[50].image}}" class="card-img-top" style="width: 100%; height: 45%" alt="Hotel1">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>{{hotels.[50].name}}</b></h5>
+                        <p class="card-text" id="address5">{{hotels.[50].address}}</p><br>
+                        <b>
+                            <P>{{hotels.[50].city}}</P>
+                            <P>{{hotels.[50].country}}
+                        </b></P> <br>
+                        <p class="card-text" id="price5" style="color: red;">&#x20B9; {{hotels.[50].price}}</p><br>
+                        <a href="/preview?id={{hotels.[50]._id}}" class="btn  mt-2">Take a look</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <img src="{{hotels.[60].image}}" class="card-img-top" style="width: 100%; height: 45%" alt="Hotel1">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>{{hotels.[60].name}}</b></h5>
+                        <p class="card-text" id="address6">{{hotels.[60].address}}</p><br>
+                        <b>
+                            <P>{{hotels.[60].city}}</P>
+                            <P>{{hotels.[60].country}}
+                        </b></P> <br>
+                        <p class="card-text" id="price6" style="color: red;">&#x20B9; {{hotels.[60].price}}</p><br>
+                        <a href="/preview?id={{hotels.[60]._id}}" class="btn  mt-2">Take a look</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <img src="{{hotels.[70].image}}" class="card-img-top" style="width: 100%; height: 45%" alt="Hotel1">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>{{hotels.[70].name}}</b></h5>
+                        <p class="card-text" id="address7">{{hotels.[70].address}}</p><br>
+                        <b>
+                            <P>{{hotels.[70].city}}</P>
+                            <P>{{hotels.[70].country}}
+                        </b></P> <br>
+                        <p class="card-text" id="price7" style="color: red;">&#x20B9; {{hotels.[70].price}}</p><br>
+                        <a href="/preview?id={{hotels.[70]._id}}" class="btn  mt-2">Take a look</a>
+                    </div>
+                </div>
+            </div>
+
+            {{!-- carousel end --}}
+
+
+        </div>
+    </div>
+</body>

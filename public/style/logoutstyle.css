@@ -1,0 +1,20 @@
+#mainbody{
+    background-color: #ffffff;
+  }
+  #maindiv{
+       /*background-color:#f2f2f2;*/
+       border: 2px solid gray;
+       /*box-shadow: 5px 10px 8px 5px;*/
+       margin-bottom:350px ;
+  }
+  
+  
+  #h2heading{
+      margin-top: 80px;
+  }
+  
+    #hr1{
+      width: 80%; 
+      border: 3px solid gray;
+      border-radius: 5px;
+      }

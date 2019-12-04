@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="./../public/style/confirm.css">
+<div class="container mt-3 pb-3">
+    <p>
+        <h3 class="mt-3">Booking Confirmed</h3>
+    </p>
+    <hr>
+    <h5>Booking Details</h5>
+    <hr>
+    <h5> Hotel:<b> {{result.name}}</b><br><br></h5>
+    <h5>Guests:<b> {{result.guests}}</b><br><br></h5>
+    <h5>Rooms:<b> {{result.rooms}}</b><br><br></h5>
+    <h5>Check-In:<b> {{result.checkIn}}</b><br><br></h5>
+    <h5>Check-out:<b> {{result.checkOut}}</b><br><br></h5>
+    <h5><b style="color: red;">&#x20B9; {{result.price}}</b><br><br></h5>
+
+    <button type=" submit" class="btn mr-5"><a href="/">Book Again</a></button>
+    <button type="submit" class="btn ml-5"><a href="/dashboard">Go to dahboard</a></button>
+
+</div>

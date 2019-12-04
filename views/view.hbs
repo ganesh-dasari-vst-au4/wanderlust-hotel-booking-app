@@ -1,0 +1,39 @@
+<div class="container  mt-2 mr-5 ml-5 pt-2 pr-5 pl-5">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="text-center">
+                <h3>Booking Details</h3>
+            </div>
+            <hr>
+            <div class="text-center">
+                <h4><b>{{result.name}}</b>
+                </h4>
+                <h6> {{result.address}}</h6>
+                <span> <small>{{result.city}},</small>
+                    <small>India</small>
+                </span>
+            </div>
+            <hr><br>
+            <div class="text-center">
+                <h5>Guest name: <b>{{result.userName}}</b></h5>
+            </div><br>
+            <div class="float-left ml-5">
+                <h5>No of rooms: <b>{{result.rooms}}</b></h5><br>
+                <h5>No of guest: <b>{{result.guests}}</b></h5>
+            </div>
+            <div class="float-right mr-5">
+                <h5>Checkin: <b>{{result.checkIn}}</b></h5><br>
+                <h5>Checkout: <b>{{result.checkOut}}</h5>
+            </div><br><br><br><br><br>
+            <div class="text-center">
+
+                <h4><b style="color: red;">&#x20B9; {{result.price}}</b></h4><br>
+                <a href="/delete?id={{result._id}}" id="cancel" data-toggle="tooltip" class="btn btn-danger
+                    data-placement=" top" title="Cancel this booking">Cancel</a>
+            </div>
+
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
