@@ -40,33 +40,67 @@
                         </div>
                         <div class="col-md-8 pb-1">
                             <div class="card-body">
-                                <h4 class="card-title" id="tilte-{{@index}}"><b>{{this.name}}</b></h4>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <h5 class="card-title" id="tilte-{{@index}}"><b>{{this.name}}</b></h5>
 
-                                <p class="card-text" id="address-{{@index}}">{{this.address}}</p><br>
-                                <span>
-                                    <p class="card-text" id="city"><b>{{this.city}},</b></p>
-                                    <p class="card-text" id="country"><b>{{this.country}}</b></p>
-                                </span>
+                                        <p class="card-text" id="address-{{@index}}"><small>{{this.address}}</small></p>
+                                        <br>
+                                        <span>
+                                            <p class="card-text" id="city"><small>{{this.city}},</small></p>
+                                            <p class="card-text" id="country"><small>{{this.country}}</small></p>
+                                        </span>
 
-                                <h5 class="phone" id="phone-{{@index}}" style="visibility:hidden;">&#9742;
-                                    {{this.phone}}
-                                </h5>
+                                        <h5 class="phone" id="phone-{{@index}}" style="visibility:hidden;">&#9742;
+                                            {{this.phone}}
+                                        </h5>
+                                        <hr>
+                                        <div class="amenities">
+                                            <div class="breakfast">
+                                                <img src="./../public/images/home/breakfast.svg" alt="" height="35px">
+                                            </div>
+                                            <div class="wash pl-3">
+                                                <img src="./../public/images/home/washing-machine.svg" alt=""
+                                                    height="30px">
+                                            </div>
+                                            <div class="clean pl-3">
+                                                <img src="./../public/images/home/cleaning.svg" alt="" height="30px">
+                                            </div>
+                                            <div class="parking pl-3">
+                                                <img src="./../public/images/home/parking.svg" alt="" height="30px">
+                                            </div>
+                                            <div class="fitness pl-3">
+                                                <img src="./../public/images/home/fitness.svg" alt="" height="35px">
+                                            </div>
+                                            <div class="swim pl-3">
+                                                <img src="./../public/images/home/swimming-pool.svg" alt=""
+                                                    height="35px">
+                                            </div>
+                                            <div class="club pl-3">
+                                                <img src="./../public/images/home/disco-ball.svg" alt="" height="35px">
+                                            </div>
+                                            <div class="garden pl-3">
+                                                <img src="./../public/images/home/tree.svg" alt="" height="35px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <p class="from"><small>From</small></p>
+                                        <h2 class="price " id="price-{{@index}}">
+                                            &#x20B9;{{this.price}}</h2>
 
-
-                                <h5 class="price " id="price-{{@index}}" style="font-size: 1.25rem;">
-                                    &#x20B9;{{this.price}}</h5>
-
-                                <button class="btn mb-2 mr-3" id="book-button"> <a href="/preview?id={{this._id}}"
-                                        id="book" class="btn">Click For More
-                                        Detail
-                                    </a></button>
-
+                                        <a href="/preview?id={{this._id}}" id="book-button" class="btn">Click For More
+                                            Detail
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </form>
             {{/each}}
+
             {{else}}
             <h1 class="text-center">Currently We dont serve in this city!!!</h1>
             {{/if}}

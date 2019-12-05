@@ -6,18 +6,74 @@
   width: 100%;
 }
 
-button#book-button {
-  height: 8vh;
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
+.from {
+  position: relative;
+  bottom: -30px;
+}
+
+.amenities {
+  display: flex;
 }
 
 .price {
-  position: absolute;
-  bottom: 10px;
+  position: relative;
+  bottom: -45px;
 }
-.btn{
+
+.breakfast {
+  position: relative;
+
+  right: -10px;
+}
+.wash {
+  position: relative;
+
+  right: -10px;
+}
+.parking {
+  position: relative;
+
+  right: -10px;
+}
+.garden {
+  position: relative;
+
+  right: -10px;
+}
+.club {
+  position: relative;
+
+  right: -10px;
+}
+.swim {
+  position: relative;
+
+  right: -10px;
+}
+.fitness {
+  position: relative;
+
+  right: -10px;
+}
+.clean {
+  position: relative;
+
+  right: -10px;
+}
+
+#book-button {
+  position: absolute;
+  right: 30px;
+  bottom: 0px;
+  font-weight: 600;
+  font-size: 13px;
+  color: white;
+  border: solid 1px transparent;
+  border-radius: 3px;
+  background-color: #f86810;
+}
+
+.btn {
   font-weight: 600;
   font-size: 13px;
   color: white;
