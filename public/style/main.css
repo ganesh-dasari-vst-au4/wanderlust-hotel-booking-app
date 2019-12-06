@@ -2,7 +2,8 @@
   font-family: "Alegreya Sans SC", sans-serif;
 }
 main {
-  min-height: calc(100vh - 76px - 48px - 55px);
+  min-height: calc(100vh - 327px);
+  margin-top: 95px;
 }
 #appname {
   font-size: larger;
