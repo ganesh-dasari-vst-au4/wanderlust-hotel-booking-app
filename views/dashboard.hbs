@@ -39,7 +39,30 @@
         <div class="col-md-5 offset-md-2 rounded text-center" style="border:1px black solid; background:transparent;">
             <h3>Profile</h3>
             <hr class="b-4">
-            <img src="./../public/images/bus.png" alt="user_profile" width="100px" class="mb-4">
+            <!-- User-Profile picture -->
+            <!--<a href="/"><img src="./../public/images/bus.png" alt="user_profile" width="100px" class="mb-4"></a>-->
+
+            <form class="md-form" action="/profile?id= {{account.[0]._id}}" enctype="multipart/form-data" method="POST">
+                <div class="file-field">
+                    <div class="mb-4">
+                        {{#if account.[0].image}}
+                        <img src={{account.[0].image}} class="rounded-circle z-depth-1-half avatar-pic"
+                            alt="example placeholder avatar">
+                        {{else}}
+                        <img src="https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg"
+                            class="rounded-circle z-depth-1-half avatar-pic" alt="example placeholder avatar">
+                        {{/if}}
+
+                    </div>
+                    <div class="d-flex btn-mdb-color btn-rounded justify-content-center">
+                        <div class="upload-btn-wrapper">
+                            <button class="btn">Add photo</button>
+                            <input type="file" name="avatar" onchange="this.form.submit()" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!-- User-Profile picture end-->
             <div class="text-center">
 
                 {{#each account}}

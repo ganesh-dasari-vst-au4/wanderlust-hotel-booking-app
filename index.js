@@ -1,8 +1,24 @@
 const express = require("express");
 var exphbs = require("express-handlebars");
 const session = require("express-session");
+var multer = require("multer");
 const app = express();
+
 const PORT = process.env.PORT || 9090;
+
+//multer config
+var filestorage = multer.diskStorage({
+  destination: function(req, file, cb) {
+    return cb(null, "./public/uploads/");
+  },
+  filename: function(req, file, cb) {
+    console.log(file);
+    var filename = new Date().getTime() + file.originalname;
+    return cb(null, filename);
+  }
+});
+
+var upload = multer({ storage: filestorage });
 
 app.use(express.json());
 app.use(express.urlencoded());
@@ -55,10 +71,11 @@ var dashboard = require("./controllers/dashboard"); //directing to dashboard
 var signupRoute = require("./controllers/signup"); //directing for signup
 var bookingDetails = require("./controllers/bookingDetails"); //for inserting booking details to Db
 var complaintRoute = require("./controllers/complaint"); // directing for clientComplaint
+var profileRoute = require("./controllers/profile"); // directing for profile
+
 var contactRoute = require("./controllers/contactus");
 var viewRoute = require("./controllers/view");
 var confirmRoute = require("./controllers/confirm");
-
 var deleteRoute = require("./controllers/delete");
 var homeController = require("./controllers/home");
 var updateRoute = require("./controllers/update");
@@ -83,6 +100,8 @@ app.get("/signup", function(request, response) {
 });
 
 app.post("/signup", signupRoute.signup);
+
+app.post("/profile", upload.single("avatar"), profileRoute.upload);
 
 app.post("/login", loginRoute.login);
 
