@@ -1,4 +1,4 @@
-<head>
+{{!-- <head>
     <!-- Site made with Mobirise Website Builder v4.11.6, https://mobirise.com -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,10 +21,13 @@
 
 
 
-</head>
+</head> --}}
 
-<body>
-    <section class="menu cid-rJL4l0uWvo" once="menu" id="menu2-a">
+
+    {{!--
+    <body>
+
+    </body> <section class="menu cid-rJL4l0uWvo" once="menu" id="menu2-a">
 
         <nav
             class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
@@ -67,20 +70,28 @@
     </section>
 
     <section class="engine"><a href="https://mobirise.info/n">free simple web templates</a></section>
-    <section class="cid-rJL5kUIcpi mbr-fullscreen mbr-parallax-background" id="header2-b">
+    <section class="cid-rJL5kUIcpi mbr-fullscreen mbr-parallax-background" id="header2-b"> 
+
+--}}
+
+
+
+
+
+
+
 
 
 
         <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(35, 35, 35);"></div>
+            
 
         <div class="container align-center">
             <div class="row justify-content-md-center">
                 <div class="mbr-white col-md-10">
-                    <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-2">
-                        Wanderlust</h1>
-
-                    <p class="mbr-text pb-3 mbr-fonts-style display-5">
-                        Find hundreds of hotels at once.</p>
+                    <p class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-2">Wanderlust</p>
+                    <div>
+                  <p class="mbr-text pb-3 mbr-fonts-style display-5">Find hundreds of hotels at once.</p></div>
                     <div class="mbr-section-btn"><a class="btn btn-md btn-black-outline display-4"
                             href="page1.html#form1-e">Book Hotel</a></div>
                 </div>
@@ -101,7 +112,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="title col-12 col-lg-8">
-                    <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style display-2">
+                    <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style display-4">
                         Search Hotels</h2>
                     <h3 class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-5"></h3>
                 </div>
@@ -111,26 +122,20 @@
             <div class="row justify-content-center">
                 <div class="media-container-column col-lg-8" data-form-type="formoid">
                     <!---Formbuilder Form--->
-                    <form action="https://mobirise.com/" method="POST" class="mbr-form form-with-styler"
-                        data-form-title="Mobirise Form"><input type="hidden" name="email" data-form-email="true"
-                            value="QMW0YAcfRzBcAeQqX9NcOZ4HodoypqnZJUtPr8qsxQzVVo7sVjxvuC5i4u269O82jQR6btrEnzg39g7AmouZ9p4PonRQw1udqia3abL//yOtU0rzMc9aSbDNdyZCbA6j">
-                        <div class="row">
-                            <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for
-                                filling out the form!</div>
-                            <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                            </div>
+                    <form action="/results" method="POST" class="mbr-form form-with-styler">
                         </div>
+                        
                         <div class="dragArea row">
                             <div class="col-md-4  form-group" data-for="name">
                                 <label for="name-form1-e"
                                     class="form-control-label mbr-fonts-style display-7">Destination</label>
-                                <input type="text" name="name" data-form-field="Name" required="required"
+                                <input type="text" name="destination" id="destination" data-form-field="Name" required="required"
                                     class="form-control display-7" id="name-form1-e">
                             </div>
                             <div class="col-md-4  form-group" data-for="email">
                                 <label for="email-form1-e"
                                     class="form-control-label mbr-fonts-style display-7">Check-in</label>
-                                <input type="email" name="email" data-form-field="Email" required="required"
+                                <input type="email" name="email" data-form-field="Email" 
                                     class="form-control display-7" id="email-form1-e">
                             </div>
                             <div data-for="phone" class="col-md-4  form-group">
@@ -141,7 +146,7 @@
                             </div>
 
                             <div class="col-md-12 input-group-btn align-center"><button type="submit"
-                                    class="btn btn-primary btn-form display-4">Search</button></div>
+                                   id="searchButton" class="btn btn-primary btn-form display-4">Search</button></div>
                         </div>
                     </form>
                     <!---Formbuilder Form--->
@@ -150,6 +155,21 @@
         </div>
     </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+{{!-- 
     <section class="cid-rJLptxRBSt" id="footer5-j">
 
 
@@ -232,7 +252,8 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> 
+    
 
 
     <script src="./../public/assets/web/assets/jquery/jquery.min.js"></script>
@@ -252,169 +273,23 @@
     <input name="animation" type="hidden">
 </body>
 
-
-<body id="mainbody">
-    <link rel="stylesheet" href="./../public/style/homestyle.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
-    <div class="row mt-5"></div>
-    <div class="container" id="maindiv">
-        <div class="row mt-3"></div>
-        {{!-- <p class="text-center" id="h1heading">Search Hotel</p> --}}
-        <center>
-            <h1>Wanderlust</h1>
-        </center>
-        <h2 class="text-center" id="h2heading">Find hundreds of hotels at once. </h2>
-        <div class="row mt-5"></div>
-        <form action="/results" method="POST">
-            <cneter>
-                <div class="row mt-2 ml-4 mr-4 pr-5">
-                    <div class="col-md-1"></div>
-                    <div class="col-md-9">
-                        <b><label>Enter your destination city here</label></b><!-- Destination input -->
-                        <input type="text" name="destination" id="destination" placeholder="Destination"
-                            class="form-control" required>
-                    </div>
-                    <div class="col-md-2"><br>
-                        <button id="searchButton" type="submit" class="btn" style="vertical-align:middle"><span>Search
-                            </span></button>
-                    </div>
-                </div>
-        </form>
-        <hr id="hr1">
-        <center>
-            <h2>Popular Hotels</h2>
-        </center>
-        <hr>
-        <br> <!-- Showing the suggestion to the user -->
-
-        {{!-- carousel --}}
-        <div class="owl-carousel owl-theme">
-            <div class="item">
-                <div class="card">
-                    <img src="{{hotels.[0].image}}" class="card-img-top" style="width: 100%; height: 45%" alt="Hotel1">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>{{hotels.[0].name}}</b></h5>
-                        <p class="card-text" id="address0"> {{hotels.[0].address}}</p><br>
-                        <b>
-                            <P>{{hotels.[0].city}}</P>
-                            <P>{{hotels.[0].country}}
-                        </b></P> <br>
-                        <p class="card-text mt-5" id="price0" style="color: RED;">&#x20B9; {{hotels.[0].price}}</p><br>
-
-                        <a href="/preview?id={{hotels.[0]._id}}" class="btn  mt-2">Take a look</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="card">
-                    <img src="{{hotels.[10].image}}" class="card-img-top" style="width: 100%; height: 45%" alt="Hotel1">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>{{hotels.[10].name}}</b></h5>
-                        <p class="card-text" id="address1"> {{hotels.[10].address}}</p><br>
-                        <b>
-                            <P>{{hotels.[10].city}}</P>
-                            <P>{{hotels.[10].country}}
-                        </b></P> <br>
-                        <p class="card-text" id="price1" style="color: red;">&#x20B9; {{hotels.[10].price}}</p><br>
-                        <a href="/preview?id={{hotels.[10]._id}}" class="btn mt-2">Take a look</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="card">
-                    <img src="{{hotels.[20].image}}" class="card-img-top" style="width: 100%; height: 45%" alt="Hotel1">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>{{hotels.[20].name}}</b></h5>
-                        <p class="card-text" id="address2">{{hotels.[20].address}}</p><br>
-                        <b>
-                            <P>{{hotels.[20].city}}</P>
-                            <P>{{hotels.[20].country}}
-                        </b></P> <br>
-                        <p class="card-text" id="price2" style="color: red;">&#x20B9; {{hotels.[20].price}}</p><br>
-                        <a href="/preview?id={{hotels.[20]._id}}" class="btn  mt-2">Take a look</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="card">
-                    <img src="{{hotels.[30].image}}" class="card-img-top" style="width: 100%; height: 45%" alt="Hotel1">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>{{hotels.[30].name}}</b></h5>
-                        <p class="card-text" id="address3"> {{hotels.[30].address}}</p><br>
-                        <b>
-                            <P>{{hotels.[30].city}}</P>
-                            <P>{{hotels.[30].country}}
-                        </b></P> <br>
-                        <p class="card-text" id="price3" style="color: red;">&#x20B9; {{hotels.[30].price}}</p><br>
-                        <a href="/preview?id={{hotels.[30]._id}}" class="btn  mt-2">Take a look</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="card">
-                    <img src="{{hotels.[40].image}}" class="card-img-top" style="width: 100%; height: 45%" alt="Hotel1">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>{{hotels.[40].name}}</b></h5>
-                        <p class="card-text" id="address4">{{hotels.[40].address}}</p><br>
-                        <b>
-                            <P>{{hotels.[40].city}}</P>
-                            <P>{{hotels.[40].country}}
-                        </b></P> <br>
-                        <p class="card-text" id="price4" style="color: red;">&#x20B9; {{hotels.[40].price}}</p><br>
-                        <a href="/preview?id={{hotels.[40]._id}}" class="btn  mt-2">Take a look</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="card">
-                    <img src="{{hotels.[50].image}}" class="card-img-top" style="width: 100%; height: 45%" alt="Hotel1">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>{{hotels.[50].name}}</b></h5>
-                        <p class="card-text" id="address5">{{hotels.[50].address}}</p><br>
-                        <b>
-                            <P>{{hotels.[50].city}}</P>
-                            <P>{{hotels.[50].country}}
-                        </b></P> <br>
-                        <p class="card-text" id="price5" style="color: red;">&#x20B9; {{hotels.[50].price}}</p><br>
-                        <a href="/preview?id={{hotels.[50]._id}}" class="btn  mt-2">Take a look</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="card">
-                    <img src="{{hotels.[60].image}}" class="card-img-top" style="width: 100%; height: 45%" alt="Hotel1">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>{{hotels.[60].name}}</b></h5>
-                        <p class="card-text" id="address6">{{hotels.[60].address}}</p><br>
-                        <b>
-                            <P>{{hotels.[60].city}}</P>
-                            <P>{{hotels.[60].country}}
-                        </b></P> <br>
-                        <p class="card-text" id="price6" style="color: red;">&#x20B9; {{hotels.[60].price}}</p><br>
-                        <a href="/preview?id={{hotels.[60]._id}}" class="btn  mt-2">Take a look</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="card">
-                    <img src="{{hotels.[70].image}}" class="card-img-top" style="width: 100%; height: 45%" alt="Hotel1">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>{{hotels.[70].name}}</b></h5>
-                        <p class="card-text" id="address7">{{hotels.[70].address}}</p><br>
-                        <b>
-                            <P>{{hotels.[70].city}}</P>
-                            <P>{{hotels.[70].country}}
-                        </b></P> <br>
-                        <p class="card-text" id="price7" style="color: red;">&#x20B9; {{hotels.[70].price}}</p><br>
-                        <a href="/preview?id={{hotels.[70]._id}}" class="btn  mt-2">Take a look</a>
-                    </div>
-                </div>
-            </div>
-
-            {{!-- carousel end --}}
+--}}
 
 
-        </div>
-    </div>
-</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
