@@ -1,33 +1,33 @@
 * {
-    font-family: "Alegreya Sans SC", sans-serif;
-  }
-  main {
-    min-height: calc(100vh - 76px - 48px - 55px);
-  }
-  #appname {
-    font-size: larger;
-    color: black;
-    position: relative;
-    bottom: -12px;
-    right: 19px;
-  }
-  input.search {
-    border-radius: 15px;
-    border: solid 1px black;
-  }
-  
-  .navbar {
-    top: 0;
-    z-index: 100;
-    position: fixed;
-    width: 100%;
-  }
-  #nav {
-    justify-content: center;
-  }
-  header {
-    background: linear-gradient(45deg, #cae9ff, #516ea5);
-  }
-  footer {
-    background: linear-gradient(45deg, #cae9ff, #516ea5);
-  }
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+main {
+  min-height: calc(100vh - 76px - 48px - 55px);
+}
+#appname {
+  font-size: larger;
+  color: black;
+  position: relative;
+  bottom: -12px;
+  right: 19px;
+}
+input.search {
+  border-radius: 15px;
+  border: solid 1px black;
+}
+
+.navbar {
+  top: 0;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+}
+#nav {
+  justify-content: center;
+}
+header {
+  background: linear-gradient(45deg, #cae9ff, #516ea5);
+}
+footer {
+  background: linear-gradient(45deg, #cae9ff, #516ea5);
+}
