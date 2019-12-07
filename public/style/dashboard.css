@@ -18,20 +18,27 @@
   padding: 0.375rem 0.75rem;
 }
 
-.upload-btn-wrapper {
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
+.removeProfile {
+  background-color: #6c757d;
 }
 
 .btn {
   font-weight: 600;
   font-size: 13px;
-  color: #f9f9f9;
-  border: solid 1px transparent;
+
   border-radius: 3px;
-  background-color: #f86810;
+
   padding: 0.375rem 0.75rem;
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+#profile {
+  display: flex;
+  margin-left: 23%;
 }
 
 .upload-btn-wrapper input[type="file"] {

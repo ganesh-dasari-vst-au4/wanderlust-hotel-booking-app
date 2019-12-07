@@ -54,14 +54,19 @@
                         {{/if}}
 
                     </div>
-                    <div class="d-flex btn-mdb-color btn-rounded justify-content-center">
-                        <div class="upload-btn-wrapper">
-                            <button class="btn">Add photo</button>
-                            <input type="file" name="avatar" onchange="this.form.submit()" />
+                    <div id="profile">
+                        <div class="d-flex btn-mdb-color btn-rounded justify-content-center">
+                            <div class="upload-btn-wrapper">
+                                <button class="btn update">Add photo</button>
+                                <input type="file" name="avatar" onchange="this.form.submit()" />
+                            </div>
                         </div>
+                        <a href="/profile" id="removeProfile" style="background-color: #afafaf;" class="btn"
+                            data-toggle="tooltip" data-placement="top" title="Remove the profile pic">Remove</a>
                     </div>
                 </div>
             </form>
+
             <hr>
             <!-- User-Profile picture end-->
             <div class="text-center">

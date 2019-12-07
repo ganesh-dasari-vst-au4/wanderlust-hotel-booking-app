@@ -103,6 +103,8 @@ app.post("/signup", signupRoute.signup);
 
 app.post("/profile", upload.single("avatar"), profileRoute.upload);
 
+app.get("/profile", profileRoute.remove);
+
 app.post("/login", loginRoute.login);
 
 app.get("/logout", loginRoute.logout);

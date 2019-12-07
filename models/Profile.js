@@ -62,4 +62,37 @@ Profile.upload = function(id, image, callback) {
   }
 };
 
+Profile.remove = function(id, callback) {
+  MongoClient.connect(url, { useUnifiedTopology: true }, function(
+    error,
+    client
+  ) {
+    if (error) {
+      throw error;
+    }
+    var database = client.db("aloha");
+    var query = {
+      _id: ObjectID(id)
+    };
+    var collection = database.collection("accounts");
+
+    collection.update(query, { $unset: { image: 1 } }, function(
+      error,
+      success
+    ) {
+      if (error) {
+        return callback({
+          status: false,
+          message: "deletion failed"
+        });
+      } else {
+        return callback(null, {
+          status: true,
+          message: "Successfully removed profile pic"
+        });
+      }
+    });
+  });
+};
+
 module.exports = Profile;
