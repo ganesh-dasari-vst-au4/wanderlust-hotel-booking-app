@@ -42,7 +42,7 @@
             <!-- User-Profile picture -->
             <!--<a href="/"><img src="./../public/images/bus.png" alt="user_profile" width="100px" class="mb-4"></a>-->
 
-            <form class="md-form" action="/profile?id= {{account.[0]._id}}" enctype="multipart/form-data" method="POST">
+            <form class="md-form" action="/profile" enctype="multipart/form-data" method="POST">
                 <div class="file-field">
                     <div class="mb-4">
                         {{#if account.[0].image}}
@@ -62,6 +62,7 @@
                     </div>
                 </div>
             </form>
+            <hr>
             <!-- User-Profile picture end-->
             <div class="text-center">
 

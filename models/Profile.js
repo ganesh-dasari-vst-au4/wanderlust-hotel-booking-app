@@ -15,45 +15,51 @@ cloudinary.config({
 });
 
 Profile.upload = function(id, image, callback) {
-  cloudinary.uploader.upload(image, function(error, response) {
-    if (error) {
-      throw error;
-    } else {
-      console.log(response);
-      uploadedImg = response.secure_url;
-    }
-  });
-
-  MongoClient.connect(url, { useUnifiedTopology: true }, function(
-    error,
-    client
-  ) {
-    if (error) {
-      throw error;
-    }
-    var database = client.db("aloha");
-
-    var identifier = {
-      _id: id
-    };
-
-    var query = {
-      image: uploadedImg
-    };
-
-    console.log("hello>>>>", query.image);
-    var collection = database.collection("accounts");
-    collection.updateOne(identifier, { $set: query }, function(error, success) {
+  try {
+    cloudinary.uploader.upload(image, function(error, response) {
       if (error) {
-        return callback({ status: false, message: "Failed to upload!!!" });
-      } else {
-        return callback(null, {
-          status: true,
-          message: "uploaded successfully!!!"
-        });
+        throw error;
       }
+      console.log(response);
+      uploadedImg = response.url;
+
+      MongoClient.connect(url, { useUnifiedTopology: true }, function(
+        error,
+        client
+      ) {
+        if (error) {
+          throw error;
+        }
+        var database = client.db("aloha");
+
+        var identifier = {
+          _id: ObjectID(id)
+        };
+
+        var query = {
+          image: uploadedImg
+        };
+
+        console.log("hello>>>>", query.image);
+        var collection = database.collection("accounts");
+        collection.updateOne(identifier, { $set: query }, function(
+          error,
+          success
+        ) {
+          if (error) {
+            return callback({ status: false, message: "Failed to upload!!!" });
+          } else {
+            return callback(null, {
+              status: true,
+              message: "uploaded successfully!!!"
+            });
+          }
+        });
+      });
     });
-  });
+  } catch (error) {
+    throw error;
+  }
 };
 
 module.exports = Profile;

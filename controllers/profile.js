@@ -2,7 +2,7 @@ const profile = {};
 const Model = require("./../models/Profile");
 
 profile.upload = function(request, response) {
-  var id = request.query.id;
+  var id = request.session.user._id;
   var image = request.file.path;
 
   Model.upload(id, image, function(error, success) {
