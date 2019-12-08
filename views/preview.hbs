@@ -4,35 +4,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
 
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <div class="container">
-        <h2 class="text-center pt-3">Hotel Details</h2>
-        <hr>
-        <div class="row">
-            <img src={{data.image}} class="col-md-6" alt="" width="50%" height="250vh">
-            <img src={{data.image2}} class="col-md-6" alt="" width="50%" height="250vh">
-        </div>
-        <hr>
-        <div class="text-center p-3" style="background-color: #e9ecef; border-radius: 3px;">
+    <div class="container-fluid">
+        <!--<h2 class="text-center  jumbotron">Hotel Details</h2>-->
+        <div class="text-center p-3 bg-secondary text-light" ><!--style="background-color: #e9ecef; border-radius: 3px;"-->
             <h2>{{data.name}}</h2>
             <h5>{{data.city}}, {{data.country}} </h5>
         </div>
-
-        <hr>
+        <div id="carouselExampleSlidesOnly" class="carousel slide " data-ride="carousel" >
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src={{data.image}} class="d-block w-100" alt="hotel image" width="100%" height="500px">
+                </div>
+                <div class="carousel-item">
+                    <img src={{data.image2}} class="d-block w-100" alt="hotel image 2" width="100%" height="500px">
+                </div>
+            </div>
+        </div>
+        <!--<div class="row">
+            <img src={{data.image}} class="col-md-6" alt="" width="50%" height="250vh">
+            <img src={{data.image2}} class="col-md-6" alt="" width="50%" height="250vh">
+        </div>-->
+        <h2 class="text-center py-3 bg-secondary text-light">Details</h2>
         <div>
-            <div class="row">
-                <div class="p-3 col-md-8">
+            <div class="row bg-primary py-3 mx-1">
+                <div class=" col-md-4 offset-md-2">
                     <h4>Address: {{data.address}}</h4><br>
                     <h4>Phone: {{data.phone}}</h4>
                 </div>
-                <div class="p-3 col-md-4">
+                <div class="col-md-4 offset-md-2">
                     <h4>Totalrooms: {{data.totalrooms}}</h4><br>
                     <h4>Price: {{data.price}}</h4>
                 </div>
             </div>
-            <hr>
-            <h2 class="text-center">Amenities</h2>
-            <hr>
-            <div class="row pt-3">
+            <h2 class="text-center py-3 bg-secondary text-light">Amenities</h2>
+            <div class="row pt-3 bg-primary">
                 <div class="col-md-4 mb-3" style="padding-left: 120px;">
                     <h5><i class='fas fa-circle' style='font-size:12px'></i> Breakfast</h5>
                 </div>
@@ -45,7 +50,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row bg-primary">
                 <div class="col-md-4 mb-3" style="padding-left: 120px;">
                     <h5><i class='fas fa-circle' style='font-size:12px'></i> Restaurant & Bar</h5>
                 </div>
@@ -57,7 +62,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row bg-primary">
                 <div class="col-md-4 mb-3" style="padding-left: 120px;">
                     <h5><i class='fas fa-circle' style='font-size:12px'></i> Swimming Pool</h5>
                 </div>
