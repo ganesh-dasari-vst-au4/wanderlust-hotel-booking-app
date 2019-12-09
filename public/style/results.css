@@ -63,6 +63,9 @@
 
 #book-button {
   position: absolute;
+  white-space: nowrap;
+  height: 35px;
+  width: 11vw;
   right: 30px;
   bottom: 0px;
   font-weight: 600;
@@ -73,7 +76,7 @@
   background-color: #f86810;
 }
 
-.btn {
+button {
   font-weight: 600;
   font-size: 13px;
   color: white;
