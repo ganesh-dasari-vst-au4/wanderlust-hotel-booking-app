@@ -8,17 +8,19 @@ const PORT = process.env.PORT || 9090;
 
 //multer config
 var filestorage = multer.diskStorage({
-  destination: function(req, file, cb) {
+  destination: function (req, file, cb) {
     return cb(null, "./public/uploads/");
   },
-  filename: function(req, file, cb) {
+  filename: function (req, file, cb) {
     console.log(file);
     var filename = new Date().getTime() + file.originalname;
     return cb(null, filename);
   }
 });
 
-var upload = multer({ storage: filestorage });
+var upload = multer({
+  storage: filestorage
+});
 
 app.use(express.json());
 app.use(express.urlencoded());
@@ -51,7 +53,7 @@ app.set("view engine", ".hbs");
 const hbs = exphbs.create({
   extname: ".hbs",
   helpers: {
-    toThree: function(index, options) {
+    toThree: function (index, options) {
       var ret = "</div>";
 
       if (index % 4 == 0) {
@@ -85,7 +87,7 @@ app.use(loginRoute.checkIfLoggedIn); // middleware for authentication
 //routes
 
 app.get("/", homeController.all);
-app.get("/signup", function(request, response) {
+app.get("/signup", function (request, response) {
   if (request.session.user === undefined) {
     return response.render("signup", {
       nav: "Signup/Login",
@@ -115,7 +117,7 @@ app.get("/dashboard", dashboard.retreive);
 
 app.get("/delete", deleteRoute.cancelBooking);
 
-app.get("/update", function(request, response) {
+app.get("/update", function (request, response) {
   return response.render("update", {
     nav: "Logout",
     link: "/logout"
@@ -124,7 +126,7 @@ app.get("/update", function(request, response) {
 
 app.post("/update", updateRoute.edit);
 
-app.get("/invalid", function(request, response) {
+app.get("/invalid", function (request, response) {
   if (request.session.user === undefined) {
     return response.render("invalid", {
       nav: "Signup/Login",
@@ -133,7 +135,7 @@ app.get("/invalid", function(request, response) {
   }
 });
 
-app.get("/contactus", function(request, response) {
+app.get("/contactus", function (request, response) {
   if (request.session.user === undefined) {
     return response.render("contactus", {
       nav: "Signup/Login",
@@ -149,7 +151,7 @@ app.get("/contactus", function(request, response) {
 
 app.post("/contactus", contactRoute.query);
 
-app.get("/aboutus", function(request, response) {
+app.get("/aboutus", function (request, response) {
   if (request.session.user === undefined) {
     return response.render("aboutus", {
       nav: "Signup/Login",
@@ -162,7 +164,7 @@ app.get("/aboutus", function(request, response) {
     });
   }
 });
-app.get("/complaint", function(request, response) {
+app.get("/complaint", function (request, response) {
   if (request.session.user === undefined) {
     return response.render("complaintClient", {
       nav: "Signup/Login",
@@ -175,6 +177,9 @@ app.get("/complaint", function(request, response) {
     });
   }
 });
+app.get('/team', function (request, response) {
+  response.render('team');
+})
 app.get("/confirm", confirmRoute.book);
 app.get("/view", viewRoute.show);
 app.post("/complaint", complaintRoute.complaint);
@@ -186,9 +191,9 @@ app.post("/bookingDetails", bookingDetails.insert);
 //listening port
 
 app
-  .listen(PORT, function() {
+  .listen(PORT, function () {
     console.log("Application has started and running on port: ", PORT);
   })
-  .on("error", function(error) {
+  .on("error", function (error) {
     console.log("Unable to start app. Error >>>>", error);
   });
