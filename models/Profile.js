@@ -18,7 +18,7 @@ Profile.upload = function(id, image, callback) {
   try {
     cloudinary.uploader.upload(image, function(error, response) {
       if (error) {
-        throw error;
+        return callback({ status: false, message: error });
       }
       console.log(response);
       uploadedImg = response.url;
