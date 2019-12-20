@@ -9,9 +9,9 @@ const url =
 var uploadedImg;
 
 cloudinary.config({
-  cloud_name: "dvxycvduu",
-  api_key: "581873119937131",
-  api_secret: "ipsgixKeWRTBK_ZPKhwKmyi6H6s"
+  cloud_name: "attainu-wanderlust",
+  api_key: "285695111156914",
+  api_secret: "6GsNv5XlGNm-oAXTiyAFa_yg5Ak"
 });
 
 Profile.upload = function(id, image, callback) {
