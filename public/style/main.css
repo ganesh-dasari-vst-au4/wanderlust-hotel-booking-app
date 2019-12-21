@@ -5,6 +5,12 @@ main {
   min-height: calc(100vh - 327px);
   margin-top: 95px;
 }
+#title {
+  position: relative;
+  bottom: -10px;
+  left: -33px;
+}
+
 #appname {
   font-size: larger;
   color: black;

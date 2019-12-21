@@ -35,7 +35,11 @@ function validateForm() {
 
 function removeMessage() {
   var errerPara = document.querySelectorAll(".error");
-  [].forEach.call(errerPara, function (el) {
+  [].forEach.call(errerPara, function(el) {
     el.innerHTML = "";
   });
 }
+
+$(document).ready(function() {
+  $(".alert").fadeOut(5000);
+});

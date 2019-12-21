@@ -46,7 +46,16 @@ loginController.checkIfLoggedIn = function(request, response, next) {
   if (request.url === "/login") {
     return next();
   }
+  if (request.url === "/changePassword") {
+    return next();
+  }
+  if (request.url === "/updatePassword") {
+    return next();
+  }
   if (request.url === "/results") {
+    return next();
+  }
+  if (request.url === "/forgot") {
     return next();
   }
   if (request.url === "/team") {

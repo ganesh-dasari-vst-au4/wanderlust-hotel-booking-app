@@ -74,6 +74,9 @@ var signupRoute = require("./controllers/signup"); //directing for signup
 var bookingDetails = require("./controllers/bookingDetails"); //for inserting booking details to Db
 var complaintRoute = require("./controllers/complaint"); // directing for clientComplaint
 var profileRoute = require("./controllers/profile"); // directing for profile
+var forgotRoute = require("./controllers/forgot.js"); // directing for forgot
+
+var updatePasswordRoute = require("./controllers/updatePassword.js"); // directing for update password
 
 var contactRoute = require("./controllers/contactus");
 var viewRoute = require("./controllers/view");
@@ -106,6 +109,8 @@ app.post("/signup", signupRoute.signup);
 app.post("/profile", upload.single("avatar"), profileRoute.upload);
 
 app.get("/profile", profileRoute.remove);
+
+app.post("/updatePassword", updatePasswordRoute.update);
 
 app.post("/login", loginRoute.login);
 
@@ -190,6 +195,22 @@ app.get("/team", function(request, response) {
     });
   }
 });
+
+app.get("/forgot", function(request, response) {
+  if (request.session.user === undefined) {
+    return response.render("forgot", {
+      nav: "Signup/Login",
+      link: "/signup"
+    });
+  } else {
+    return response.render("forgot", {
+      nav: "Logout",
+      link: "/logout"
+    });
+  }
+});
+
+app.post("/forgot", forgotRoute.search);
 app.get("/confirm", confirmRoute.book);
 app.get("/view", viewRoute.show);
 app.post("/complaint", complaintRoute.complaint);
