@@ -6,7 +6,9 @@ forgotController.search = function(request, response) {
 
   Model.search(email, function(error, success) {
     if (error) {
-      return response.render("forgot", {
+      return response.render("signup", {
+        nav: "Signup/Login",
+        link: "/signup",
         error: "The email you entered doesn't match any account."
       });
     } else {

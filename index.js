@@ -196,20 +196,6 @@ app.get("/team", function(request, response) {
   }
 });
 
-app.get("/forgot", function(request, response) {
-  if (request.session.user === undefined) {
-    return response.render("forgot", {
-      nav: "Signup/Login",
-      link: "/signup"
-    });
-  } else {
-    return response.render("forgot", {
-      nav: "Logout",
-      link: "/logout"
-    });
-  }
-});
-
 app.post("/forgot", forgotRoute.search);
 app.get("/confirm", confirmRoute.book);
 app.get("/view", viewRoute.show);
