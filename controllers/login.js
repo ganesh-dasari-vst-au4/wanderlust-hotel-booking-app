@@ -49,6 +49,9 @@ loginController.checkIfLoggedIn = function(request, response, next) {
   if (request.url === "/results") {
     return next();
   }
+  if (request.url === "/team") {
+    return next();
+  }
   if (request.url === "/preview") {
     return next();
   }

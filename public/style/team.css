@@ -1,0 +1,9 @@
+.card-img-top {
+  height: 50vh;
+  width: 20vw;
+}
+
+.card-deck {
+  display: flex;
+  justify-content: space-evenly;
+}
