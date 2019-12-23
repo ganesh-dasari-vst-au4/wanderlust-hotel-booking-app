@@ -12,10 +12,10 @@
   width: 100%;
 }
 
-.col-sm-6 {
+.col-sm-5 {
   position: absolute;
-  top: -95vh;
-  right: -3vw;
+  top: -88vh;
+  right: -1vw;
 }
 
 .col-sm-12 {
