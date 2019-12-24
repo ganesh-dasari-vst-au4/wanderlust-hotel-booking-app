@@ -31,14 +31,19 @@
 .logindiv {
   left: 474px;
 }
-.fontcolor{
+.fontcolor {
   color: white;
 }
-.tabs{
+.tabs {
   font-weight: 800;
   font-size: 15px;
   color: #f9f9f9;
   border: solid 1px transparent;
   border-radius: 3px;
-  background-color: #fff;
+  background-color: aliceblue;
+}
+
+.btn-block {
+  position: relative;
+  right: 12px;
 }
