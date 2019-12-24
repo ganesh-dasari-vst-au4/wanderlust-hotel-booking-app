@@ -1,6 +1,6 @@
 .btn {
   font-weight: 600;
-  font-size: 13px;
+  font-size: 18px;
   color: #f9f9f9;
   border: solid 1px transparent;
   border-radius: 3px;
@@ -14,7 +14,7 @@
 
 .col-sm-5 {
   position: absolute;
-  top: -88vh;
+  top: -80vh;
   right: -1vw;
 }
 
@@ -30,4 +30,15 @@
 
 .logindiv {
   left: 474px;
+}
+.fontcolor{
+  color: white;
+}
+.tabs{
+  font-weight: 800;
+  font-size: 15px;
+  color: #f9f9f9;
+  border: solid 1px transparent;
+  border-radius: 3px;
+  background-color: #fff;
 }
