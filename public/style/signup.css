@@ -12,6 +12,11 @@
   width: 100%;
 }
 
+.btn-outline-primary {
+  color: #fff;
+  background-color: #007bff;
+}
+
 .col-sm-5 {
   position: absolute;
   top: -80vh;
